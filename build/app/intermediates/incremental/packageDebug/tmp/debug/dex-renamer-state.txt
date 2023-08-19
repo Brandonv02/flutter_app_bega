@@ -1,4 +1,4 @@
-#Sat Aug 19 13:30:10 COT 2023
+#Sat Aug 19 13:39:27 COT 2023
 base.0=/home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

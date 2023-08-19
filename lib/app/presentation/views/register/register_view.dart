@@ -1,26 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sekerme_ecommerce/app/config/security/encript.dart';
 import 'package:sekerme_ecommerce/app/presentation/views/register/widgets/my_check_box.dart';
 import 'package:sekerme_ecommerce/app/presentation/views/register/widgets/my_date_picker.dart';
 import 'package:sekerme_ecommerce/app/presentation/widgets/my_button_form.dart';
 import 'package:sekerme_ecommerce/app/presentation/widgets/my_text_form.dart';
 
 
-class RegisterView extends StatelessWidget {
+class RegisterView extends StatefulWidget {
 
   static const String name = 'register_view';
 
+
+  RegisterView({
+    super.key
+  });
+
+  @override
+  State<RegisterView> createState() => _RegisterViewState();
+}
+
+class _RegisterViewState extends State<RegisterView> {
   final _firstName        = TextEditingController();
   final _lastName         = TextEditingController();
   final _email            = TextEditingController();
   final _password         = TextEditingController();
   final _confirmPassword  = TextEditingController();
   final _datePecker       = TextEditingController();
-  final _checkBox         = false;
-
-  RegisterView({
-    super.key
-  });
+  bool _checkBox         = false;
+  int count = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -99,12 +107,35 @@ class RegisterView extends StatelessWidget {
                   const SizedBox(height: 16.0),
                   MyCheckBox(
                     value: _checkBox,
-                    onChanged: (bool? value) {},
+                    onChanged: (bool? value) {
+                      setState(() {
+                        _checkBox = value!;
+                      });
+                    },
                   ),
                   const SizedBox(height: 16.0),
                   MyButtonForm(
                       text: 'Sing in',
                       onTap: (){
+                        if (_checkBox==false){
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: const Text('Acepta los terminos y condiciones'),
+                                backgroundColor: Theme.of(context).colorScheme.error
+                              )
+                          );
+                        }else{
+                          print(encript(_confirmPassword.text));
+                          print(encript(_password.text));
+                          if (_password.text == _confirmPassword.text){
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                    content: const Text('Son la misma monda'),
+                                    backgroundColor: Theme.of(context).colorScheme.onSurface
+                                )
+                            );
+                          }
+                        }
                     }),
                 ],
               ),

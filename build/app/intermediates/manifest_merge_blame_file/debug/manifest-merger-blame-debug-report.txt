@@ -47,36 +47,46 @@
 44
 45                <category android:name="android.intent.category.LAUNCHER" />
 46            </intent-filter>
-47        </activity>
-48        <!--
-49             Don't delete the meta-data below.
-50             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-51        -->
-52        <meta-data
-53            android:name="flutterEmbedding"
-54            android:value="2" />
-55
-56        <activity
-56-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
-57            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-57-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
-58            android:exported="false"
-58-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
-59            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-59-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
-60
-61        <uses-library
-61-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-62            android:name="androidx.window.extensions"
-62-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-63            android:required="false" />
-63-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-64        <uses-library
-64-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-65            android:name="androidx.window.sidecar"
-65-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-66            android:required="false" />
-66-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-67    </application>
-68
-69</manifest>
+47            <intent-filter>
+48                <action android:name="android.intent.action.VIEW" />
+49
+50                <category android:name="android.intent.category.DEFAULT" />
+51                <category android:name="android.intent.category.BROWSABLE" />
+52                <!-- Accepts URIs that begin with YOUR_SCHEME://YOUR_HOST -->
+53                <data
+54                    android:host="login-callback"
+55                    android:scheme="io.supabase.proyectoflutter" />
+56            </intent-filter>
+57        </activity>
+58        <!--
+59             Don't delete the meta-data below.
+60             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+61        -->
+62        <meta-data
+63            android:name="flutterEmbedding"
+64            android:value="2" />
+65
+66        <activity
+66-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+67            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+67-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+68            android:exported="false"
+68-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+69            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+69-->[:url_launcher_android] /home/finde/Escritorio/flutter_app_bega/flutter_app_bega/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+70
+71        <uses-library
+71-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+72            android:name="androidx.window.extensions"
+72-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+73            android:required="false" />
+73-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+74        <uses-library
+74-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+75            android:name="androidx.window.sidecar"
+75-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+76            android:required="false" />
+76-->[androidx.window:window:1.0.0-beta04] /home/finde/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+77    </application>
+78
+79</manifest>

@@ -7,6 +7,7 @@ class UsersModel {
   final String? telefono;
   final String? direccion;
   final String password;
+  final String id_rol;
 
   UsersModel({
     required this.identificacion,
@@ -15,6 +16,7 @@ class UsersModel {
     this.telefono,
     this.direccion,
     required this.password,
+    required this.id_rol,
   });
 
   static UsersModel fromJson(Map<String, dynamic> json) => UsersModel(
@@ -23,7 +25,8 @@ class UsersModel {
       correo: json['correo'],
       telefono: json['telefono'],
       direccion: json['direccion'],
-      password: json['password']
+      password: json['password'],
+      id_rol: json['id_rol']
   );
 
   Map<String,dynamic>toJson()=><String,dynamic>{
@@ -33,6 +36,7 @@ class UsersModel {
     'telefono':telefono,
     'direccion':direccion,
     'password':password,
+    'id_rol':id_rol
   };
 
 }
